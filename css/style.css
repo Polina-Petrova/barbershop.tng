@@ -16,11 +16,202 @@ body {
   text-transform: uppercase;
 }
 
+.inner-page {
+  color: #000000;
+  background: #f8f3f0 url("../img/pattern-light.jpg");
+}
+
+.inner-page .main-header {
+  margin-bottom: 55px;
+}
+
+/*.inner-content {*/
+  /*margin-bottom: 75px;*/
+/*}*/
+
+.inner-content h2 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-content p {
+  margin: 14px 0;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+}
+
+.inner-content td {
+  padding: 10px 15px;
+  border: 2px solid #000000;
+}
+
+.inner-content .big-heading {
+  margin-top: 55px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.inner-content .big-heading::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid black;
+  position: relative;
+  top: -25px;
+  z-index: 1;
+
+}
+
+.inner-content .big-heading h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 25px;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #f8f3f0 url("../img/pattern-light.jpg");
+  z-index: 2;
+}
+
+.inner-content .custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inner-content .custom-list-1 li {
+  position: relative;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+
+.inner-content .custom-list-1 li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.inner-content .prices-table {
+  width: 100%;
+}
+
+.inner-content .prices-table td {
+  width: 50%;
+}
+
+.inner-content .prices-table td:last-child {
+  text-align: center;
+}
+
+.inner-content .columns {
+  /*margin: 60px 0;*/
+  margin: 0;
+}
+
+.inner-content .columns .left-column,
+.inner-content .columns .right-column {
+  width: 460px;
+}
+
+.inner-content .columns .right-column p,
+.inner-content .columns .left-column p {
+  width: 400px;
+}
+
 .container {
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
 }
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 33px;
+  margin-right: 16px;
+  font: inherit;
+  vertical-align: top;
+  text-align: center;
+  line-height: 24px;
+  color: white;
+  background-color: black;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.inner-title h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.inner-title .breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inner-title .breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding-right: 40px;
+}
+
+.inner-title .breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 18px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.inner-title .breadcrumbs a {
+  color: black;
+  text-decoration: none;
+}
+
+.inner-title .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.inner-title .breadcrumbs .current {
+  color: #aba9a7;
+}
+
+.inner-title .breadcrumbs .current::after {
+  display: none;
+}
+
+
+
 
 .main-header {
   background-color: black;
@@ -61,7 +252,6 @@ body {
 
 .main-header a {
   color: white;
-  text-decoration: none;
   display: block;
   padding: 25px 20px;
   font-size: 16px;
@@ -144,13 +334,6 @@ main .content-block {
   #f8f5f2 url("../img/pattern-light.jpg");
 }
 
-main .contact-reserv {
-  padding: 50px 80px;
-  color: black;
-  background: url("../img/separate-line.png") no-repeat center,
-  #f8f5f2 url("../img/pattern-light.jpg");
-}
-
 main .left-column {
   float: left;
   width: 380px;
@@ -161,39 +344,359 @@ main .right-column {
   width: 300px;
 }
 
-main .content-block h3,
-main .contact-reserv h3 {
+main .content-block h3 {
   margin: 0;
   margin-bottom: 25px;
   font-size: 30px;
   line-height: 42px;
 }
 
+main .content-block p {
+  margin-bottom: 25px;
+}
+
+main .content-block data {
+  text-transform: none;
+}
+
+main .content-block .gallery {
+  position: relative;
+  height: 260px;
+}
+
+main .content-block .gallery-content {
+  height: 164px;
+  margin: 0;
+  border: 7px solid white;
+}
+
+main .content-block .gallery .btn {
+  position: absolute;
+  bottom: 0;
+  width: 74px;
+  margin: 0;
+}
+
+main .content-block .gallery .btn.prev {
+  left: 0;
+}
+
+main .content-block .gallery .btn.next {
+  right: 0;
+}
+
+main .content-block form input {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  background-color: #f9f6f3;
+  border: 2px solid black;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  width: 106px;
+  padding: 7px 15px;
+}
+
+main .content-block form input:nth-child(2n) {
+  margin-right: 0;
+}
+
+main .content-block form .btn {
+  width: 100%;
+}
+
+main .content-block form input:focus {
+  border: 2px solid #663d15;
+}
+
+
+
+
+
+
+
+
 .main-footer {
   margin-top: 65px;
   padding-top: 60px;
   padding-bottom: 40px;
-  background: url("../img/pattern-footer.jpg");
+  background: #252525 url("../img/pattern-footer.jpg");
+  color: white;
+  box-shadow: inset 0 30px 40px -15px #000000;
 }
 
-footer .contacts {
+.main-footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.main-footer .contacts {
   float: left;
   width: 320px;
   margin-right: 60px;
 }
 
-footer .social {
+.main-footer .social {
   float: left;
   width: 180px;
+  text-align: center;
 }
 
-footer .copyright {
+.main-footer .copyright {
   float: right;
-  width: 160px;
+  max-width: 160px;
+}
+
+.main-footer .copyright p {
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.main-footer .copyright .btn {
+  margin-right: 0;
+  text-decoration: none;
+}
+
+.main-footer .copyright .btn:hover {
+  margin-right: 0;
+  text-decoration: none;
+  background: white;
+  color: black;
+}
+
+.main-footer .social p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.main-footer .social a {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin: 0 2px;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.main-footer .social .vk {
+  background: #000000 url("../img/vk-white-letters.png") center no-repeat;
+}
+
+.main-footer .social .fb {
+  background: #000000 url("../img/fb-white-letters.png") center no-repeat;
+}
+
+.main-footer .social .inst {
+  background: #000000 url("../img/inst-white-letters.png") center no-repeat;
+}
+
+.main-footer .social .vk:hover {
+  background: white url("../img/vk-black-letters.png") center no-repeat;
+}
+
+.main-footer .social .fb:hover {
+  background: white url("../img/fb-black-letters.png") center no-repeat;
+}
+
+.main-footer .social .inst:hover {
+  background: white url("../img/inst-black-letters.png") center no-repeat;
 }
 
 
 
 
 
+
+
+.main-header nav .logo {
+  float: left;
+  width: 111px;
+  height: 20px;
+  padding-top: 22px;
+}
+
+.main-header nav .logo:hover {
+  background: none;
+}
+
+.main-header nav ul li.active {
+  position: relative;
+  background-color: transparent;
+}
+
+.main-header nav ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  left: 20px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.main-header nav ul li.active:hover a {
+  background: none;
+}
+
+.modal-content {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 300px;
+  margin-left: -230px;
+  padding: 50px 80px;
+  color: #000;
+  background: #f8f3f0 url("../img/pattern-light.jpg");
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+
+.close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+}
+
+.modal-content form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font: inherit;
+  color: black;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid black;
+}
+
+.modal-content form input:focus {
+  background-color: #663d15;
+}
+
+.modal-content form .icon-user {
+  background: url("../img/User-icon.png") no-repeat 270px;
+}
+
+.modal-content form .icon-password {
+  background: url("../img/password-icon.png") no-repeat 270px;
+}
+
+.modal-content a {
+  float: right;
+  color: black;
+  text-decoration: underline;
+}
+
+.modal-content form button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.modal-content form .login-checkbox input[type="checkbox"] {
+  display: none;
+
+}
+
+.modal-content form .login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.modal-content form .login-checkbox:hover {
+  color: #663d15;
+}
+
+.modal-content form .login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid black;
+}
+
+.modal-content form .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.modal-content form .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.modal-content form .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.modal-content form .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.modal-content-map {
+  display: none;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  z-index: 20;
+  margin-top: -280px;
+  margin-left: -390px;
+  width: 765px;
+  height: 560px;
+  background: #e9e5dc url("../img/map.jpg");
+  border: 7px solid white;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 
